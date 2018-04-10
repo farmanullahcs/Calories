@@ -1,0 +1,21 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Add Meals{% endblock %}
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('bundles/css/formValidation.css') }}" />
+{% endblock %}
+{% block body %}
+    <div class="container">
+    <h2 class="page-header">Add Meals</h2>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+
+        <div class="col-md-offset-3 col-md-6">
+            <button type="submit" class="btn green" name="submit" value="Save">Save Meals</button>
+            <button type="reset" class="btn purple">Refresh</button>
+            <button type="reset" class="btn red" onclick="javascript:history.back()"> <i class="fa fa-mail-reply-all"></i> Go Back</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
